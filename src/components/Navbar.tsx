@@ -7,7 +7,7 @@ interface navBarProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
 }
 
 
-const Navbar = React.forwardRef<HTMLElement, navBarProps>(({className, ...props}, ref) => {
+const Navbar = React.forwardRef<HTMLElement, navBarProps>(({className}, ref) => {
     return <nav className={cn("flex items-center h-20 bg-slate-900", className)} ref={ref}>
     <a href="/" className={"pr-5"}>
         <img src={pfpImage} alt="pfp" className="size-20"/>
