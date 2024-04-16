@@ -1,13 +1,23 @@
+import React from "react";
 import pfpImage from "/pfp.png"
-const Navbar = () => {
-    return <nav className="flex items-center h-20 bg-slate-900 ">
-        <a href="/" className={"pr-5"}>
-            <img src={pfpImage} alt="pfp" className="size-20"/>
-        </a>
-        <a href="/about" className="text-white bg-[#192441] hover:bg-[#3F51B5] font-medium rounded-lg text-sm mx-5 px-8 py-2.5 mr-2">About</a>
-        <a href="/projects" className="text-white bg-[#192441] hover:bg-[#3F51B5] font-medium rounded-lg text-sm mx-5 px-8 py-2.5 mr-2">Projects</a>
-    </nav>
+import { cn } from "../utils/utils";
+
+interface navBarProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
+
 }
+
+
+const Navbar = React.forwardRef<HTMLElement, navBarProps>(({className, ...props}, ref) => {
+    return <nav className={cn("flex items-center h-20 bg-slate-900", className)} ref={ref}>
+    <a href="/" className={"pr-5"}>
+        <img src={pfpImage} alt="pfp" className="size-20"/>
+    </a>
+    <a href="/about" className="text-white bg-[#192441] hover:bg-[#3F51B5] font-medium rounded-lg text-sm mx-5 px-8 py-2.5 mr-2">About</a>
+    <a href="/projects" className="text-white bg-[#192441] hover:bg-[#3F51B5] font-medium rounded-lg text-sm mx-5 px-8 py-2.5 mr-2">Projects</a>
+</nav>
+})
+
+Navbar.displayName = "Navbar"
 export default Navbar;
 // <!-- frame: navbar -->
 // <div class="frame navbar-343b5b2cf2be">
