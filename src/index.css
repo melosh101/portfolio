@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Snippet", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url(https://fonts.googleapis.com/css2?family=Snippet&display=swap);
+  }
+
+}
