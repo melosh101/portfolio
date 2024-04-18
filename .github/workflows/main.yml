@@ -9,6 +9,8 @@ on:
       - "tailwind*"
       - "public/"
       - "index.html"
+    tags-ignore: 
+      - "*"
       
   workflow_dispatch:
     
