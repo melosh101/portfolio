@@ -19,23 +19,26 @@ function App() {
                 <li className='text-l'>
                 including blog posts, self-hosting projects and much more
                 </li>
-              </div>              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
+              </div>              
+              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
                 <li className='text-xl'>Want to see more?</li>
                 <li className='text-l'>
                 including blog posts, self-hosting projects and much more
                 </li>
-              </div>              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
+              </div>              
+              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
                 <li className='text-xl'>Want to see more?</li>
                 <li className='text-l'>
                 including blog posts, self-hosting projects and much more
                 </li>
-              </div>              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
+              </div>              
+              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
                 <li className='text-xl'>Want to see more?</li>
                 <li className='text-l'>
                 including blog posts, self-hosting projects and much more
                 </li>
               </div>
-              <li className='relative self-start list-none'>Check out my github</li>
+              <a className='relative self-start list-none'>Check out my github</a>
 
             </div>
           </div>

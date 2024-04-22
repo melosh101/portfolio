@@ -1,5 +1,5 @@
 import React from "react";
-import pfpImage from "/pfp.png"
+import pfpImage from "../../public/pfp.png"
 import { cn } from "../utils/utils";
 
 interface navBarProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{

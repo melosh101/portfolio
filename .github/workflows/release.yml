@@ -1,8 +1,8 @@
-name: test build
+name: deploy
 on:
   push:
     tags: 
-      - "**"
+      - "v*"
   workflow_dispatch:   
 
 env:
@@ -12,6 +12,9 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
+      artifact: ${{ steps.get_version.outputs.artifact }}
     steps:
       # ...
       - uses: actions/checkout@v4
@@ -20,24 +23,37 @@ jobs:
       # run any `bun` or `bunx` command
       - run: bun install
       - run: bun run build
+      - id: get_version
+        name: get Package Version
+        run: |
+          export VERSION="$(jq -c '.version' package.json)"
+          export ARTIFACT="build-${VERSION}"
+          echo "version=${VERSION}" >> $GUTHUB_OUTPUT
+          echo "artifact=${ARTIFACT}" >> $GUTHUB_OUTPUT
+      - uses: actions/upload-artifact@master
+        with:
+          name: ${{ steps.get_version.outputs.artifact}}
+          path: dist
     
   release:
+    env:
+      version: ${{ needs.build.outputs.version }}
     needs: build
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - id: get_version
-        name: get Package Version
-        run: |
-          echo "version=$(jq -c '.version' package.json)" >> "$GUTHUB_OUTPUT"
-      
+
+      - uses: actions/download-artifact@master
+        with:
+          name: ${{needs.build.outputs.artifact}}
+          path: 
       - name: release
         uses: actions/create-release@v1
         id: create_release
         with:
           draft: false
           prerelease: false
-          release_name: ${{ steps.get_version.outputs.version }}
+          release_name: ${{ github.ref_name }}
           tag_name: ${{ github.ref }}
           body_path: CHANGELOG.md
         env:
