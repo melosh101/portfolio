@@ -28,8 +28,8 @@ jobs:
         run: |
           VERSION="$(jq -c '.version' package.json)"
           ARTIFACT="build-${VERSION}"
-          echo "version=${VERSION}" >> $GUTHUB_OUTPUT
-          echo "artifact=${ARTIFACT}" >> $GUTHUB_OUTPUT
+          echo "version=${VERSION}" >> "$GUTHUB_OUTPUT"
+          echo "artifact=${ARTIFACT}" >> "$GUTHUB_OUTPUT"
       - uses: actions/upload-artifact@master
         with:
           name: ${{ steps.get_version.outputs.artifact}}
