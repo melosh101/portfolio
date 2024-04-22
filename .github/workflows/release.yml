@@ -23,9 +23,11 @@ jobs:
       # run any `bun` or `bunx` command
       - run: bun install
       - run: bun run build
+      - run: ls
       - id: get_version
         name: get Package Version
         run: |
+          ls
           VERSION="$(jq -c '.version' package.json)"
           ARTIFACT="build-${VERSION}"
           echo "version=${VERSION}" >> "$GUTHUB_OUTPUT"
