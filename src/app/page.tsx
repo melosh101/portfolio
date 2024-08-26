@@ -1,7 +1,6 @@
 import Link from "next/link";
 
-import { LatestPost } from "~/app/_components/post";
-import { api, HydrateClient } from "~/trpc/server";
+import { HydrateClient } from "~/trpc/server";
 import Image from "next/image";
 import Navbar from "./_components/navbar";
 
@@ -10,7 +9,7 @@ export default async function Home() {
     <HydrateClient>
       <header>
         <nav id="navbar" className="col-span-2">
-          <Navbar className="" />
+          <Navbar/>
         </nav>
       </header>
       <main className="min-h-screen bg-slate-800 text-white">
