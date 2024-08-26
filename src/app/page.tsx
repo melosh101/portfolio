@@ -2,52 +2,72 @@ import Link from "next/link";
 
 import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
+import Image from "next/image";
 import Navbar from "./_components/navbar";
 
 export default async function Home() {
-
   return (
     <HydrateClient>
-      <main className="text-white bg-slate-800 min-h-screen">
-        <div id="navbar" className='col-span-2'>
-          <Navbar className='' />
-        </div>
-        <div className="grid grid-cols-[2.5fr_1fr] h-full relative dark:bg-background">
-          <div id="gridContentWrapper" className="items-center self-start justify-end h-full ml-[40%] flex-nowrap">
-            <li className='font-bold list-none dark:text-white text-8xl mt-14 font-snippet ml-[30%]'>Melosh</li>
-            <li className='dark:text-white text-2xl mt-2 font-bold font-scp list-none ml-[40%]'>&lt;Code is life /&gt;</li>
-            <div className='grid self-end font-medium font-scp justify-around w-full h-full grid-cols-2 grid-rows-[auto_auto_auto] gap-4 list-none pt-9'>
-              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
-                <li className='text-xl'>Want to see more?</li>
-                <li className='text-l'>
+      <header>
+        <nav id="navbar" className="col-span-2">
+          <Navbar className="" />
+        </nav>
+      </header>
+      <main className="min-h-screen bg-slate-800 text-white">
+        <div className="relative grid h-full grid-cols-[2.5fr_1fr] dark:bg-background">
+          <div
+            id="gridContentWrapper"
+            className="ml-[40%] h-full flex-nowrap items-center justify-end self-start"
+          >
+            <li className="font-snippet ml-[30%] mt-14 list-none text-8xl font-bold dark:text-white">
+              Melosh
+            </li>
+            <li className="font-scp ml-[40%] mt-2 list-none text-2xl font-bold dark:text-white">
+              &lt;Code is life /&gt;
+            </li>
+            <section className="font-scp grid h-full w-full list-none grid-cols-2 grid-rows-[auto_auto_auto] justify-around gap-4 self-end pt-9 font-medium">
+              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
+                <li className="text-xl">Want to see more?</li>
+                <li className="text-l">
                   including blog posts, self-hosting projects and much more
                 </li>
-              </div>
-              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
-                <li className='text-xl'>Want to see more?</li>
-                <li className='text-l'>
+              </article>
+              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
+                <li className="text-xl">Want to see more?</li>
+                <li className="text-l">
                   including blog posts, self-hosting projects and much more
                 </li>
-              </div>
-              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
-                <li className='text-xl'>Want to see more?</li>
-                <li className='text-l'>
+              </article>
+              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
+                <li className="text-xl">Want to see more?</li>
+                <li className="text-l">
                   including blog posts, self-hosting projects and much more
                 </li>
-              </div>
-              <div className="w-full h-full col-span-1 p-2 rounded-md dark:text-white size-12 bg-primary">
-                <li className='text-xl'>Want to see more?</li>
-                <li className='text-l'>
+              </article>
+              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
+                <li className="text-xl">Want to see more?</li>
+                <li className="text-l">
                   including blog posts, self-hosting projects and much more
                 </li>
-              </div>
-              <Link className='relative self-start list-none' href={"https://github.com/melosh101"} target="_blank">Check out my github</Link>
-
-            </div>
+              </article>
+              <Link
+                className="relative list-none self-start"
+                href={"https://github.com/melosh101"}
+                target="_blank"
+              >
+                Check out my github
+              </Link>
+            </section>
           </div>
-          <div className='w-full h-full col-span-1 '>
-            <img src="/pfp.png" alt="" className=" mt-20 ml-12 w-[80%] h-[80%]" />
-          </div>
+          <section className="col-span-1 h-full w-full">
+            <Image
+              alt="pfp"
+              src={"/pfp_nobg.svg"}
+              height={"1000"}
+              width={"1000"}
+              className="ml-12 mt-20 h-[80%] w-[80%]"
+            />
+          </section>
         </div>
       </main>
     </HydrateClient>
