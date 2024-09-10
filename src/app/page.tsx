@@ -7,15 +7,27 @@ import Navbar from "./_components/navbar";
 export default async function Home() {
   return (
     <HydrateClient>
-      <header className="fixed top-0 w-full">
+      <header className="fixed top-0 w-full md:relative">
         <Navbar />
       </header>
-      <main className="min-h-screen dark:text-white mt-28">
+      <main className="min-h-screen dark:text-white  mt-28 md:mt-8">
 
-        <section className="text-center items-center">
-          <Image width={1000} height={1000} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-lg ml-auto mr-auto" />
-          <h1 className="text-4xl mt-4">Milas Holsting</h1>
-          <h2 className="text-2xl ">&lt;Code is life /&gt;</h2>
+        <section className="text-center items-center md:flex md:flex-row-reverse">
+          <Image width={1000} height={1000} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-lg ml-auto mr-auto md:w-[40%] lg:w-[10%]" />
+          <div className="md:ml-24">
+            <h1 className="text-4xl mt-4 sm:mt-0">Milas Holsting</h1>
+            <h2 className="text-2xl ">&lt;Code is life /&gt;</h2>
+              <li className="my-auto mr-3">teknologier:</li>
+            <div className="flex justify-center flex-row gap-2">
+              <picture>
+                <Image width={32} height={32} alt={"react"} src={"/react_light.svg"} />
+              </picture>
+              <picture>
+                <source srcSet="/next/light/icon.svg" media="(prefers-color-scheme:dark)" />
+                <Image width={32} height={32} alt={"react"} src={"/next/light/icon.svg"} />
+              </picture>
+            </div>
+          </div>
         </section>
         <hr className="mx-auto my-12 w-[90%]" />
         <section className="text-center">
