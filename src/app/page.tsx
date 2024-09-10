@@ -7,67 +7,30 @@ import Navbar from "./_components/navbar";
 export default async function Home() {
   return (
     <HydrateClient>
-      <header>
-        <nav id="navbar" className="col-span-2">
-          <Navbar/>
-        </nav>
+      <header className="fixed top-0 w-full">
+        <Navbar />
       </header>
-      <main className="min-h-screen bg-slate-800 text-white">
-        <div className="relative grid h-full grid-cols-[2.5fr_1fr] dark:bg-background">
-          <div
-            id="gridContentWrapper"
-            className="ml-[40%] h-full flex-nowrap items-center justify-end self-start"
-          >
-            <li className="font-snippet ml-[30%] mt-14 list-none text-8xl font-bold dark:text-white">
-              Melosh
-            </li>
-            <li className="font-scp ml-[40%] mt-2 list-none text-2xl font-bold dark:text-white">
-              &lt;Code is life /&gt;
-            </li>
-            <section className="font-scp grid h-full w-full list-none grid-cols-2 grid-rows-[auto_auto_auto] justify-around gap-4 self-end pt-9 font-medium">
-              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
-                <li className="text-xl">Want to see more?</li>
-                <li className="text-l">
-                  including blog posts, self-hosting projects and much more
-                </li>
-              </article>
-              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
-                <li className="text-xl">Want to see more?</li>
-                <li className="text-l">
-                  including blog posts, self-hosting projects and much more
-                </li>
-              </article>
-              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
-                <li className="text-xl">Want to see more?</li>
-                <li className="text-l">
-                  including blog posts, self-hosting projects and much more
-                </li>
-              </article>
-              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
-                <li className="text-xl">Want to see more?</li>
-                <li className="text-l">
-                  including blog posts, self-hosting projects and much more
-                </li>
-              </article>
-              <Link
-                className="relative list-none self-start"
-                href={"https://github.com/melosh101"}
-                target="_blank"
-              >
-                Check out my github
-              </Link>
-            </section>
+      <main className="min-h-screen dark:text-white mt-28">
+
+        <section className="text-center items-center">
+          <Image width={1000} height={1000} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-lg ml-auto mr-auto" />
+          <h1 className="text-4xl mt-4">Milas Holsting</h1>
+          <h2 className="text-2xl ">&lt;Code is life /&gt;</h2>
+        </section>
+        <hr className="mx-auto my-12 w-[90%]" />
+        <section className="text-center">
+          <h2 className="text-2xl ">Mine projekter</h2>
+          <div className="grid mt-6 text-left">
+            <article className="bg-slate-900 p-4 rounded-lg m-4">
+              <h1 className="font-bold">Portfolio:</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sit quaerat quidem saepe placeat sunt ducimus nisi odio eveniet natus error facilis illum ad nihil assumenda,
+                omnis, in neque, consequuntur totam.
+              </p>
+            </article>
           </div>
-          <section className="col-span-1 h-full w-full">
-            <Image
-              alt="pfp"
-              src={"/pfp_nobg.svg"}
-              height={"1000"}
-              width={"1000"}
-              className="ml-12 mt-20 h-[80%] w-[80%]"
-            />
-          </section>
-        </div>
+        </section>
       </main>
     </HydrateClient>
   );
