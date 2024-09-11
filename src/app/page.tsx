@@ -16,8 +16,16 @@ export default async function Home() {
           <Image width={1000} height={1000} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-lg ml-auto mr-auto md:w-[40%] lg:w-[10%]" />
           <div className="md:ml-24">
             <h1 className="text-4xl mt-4 sm:mt-0">Milas Holsting</h1>
-            <h2 className="text-2xl ">&lt;Code is life /&gt;</h2>
-              <li className="my-auto mr-3">teknologier:</li>
+            <h2 className="text-xl font-mono">&lt;Code is life/&gt;</h2>
+            <article className="block text-left mt-4 mx-4 px-4 py-2 rounded-lg dark:bg-slate-900 ">
+              <h3 className="font-semibold">Hvem er jeg?</h3>
+              <p className="font-sans">
+                jeg er en 18 årig ung dreng, som elsker et god udfordring. <br />
+                Jeg arbejder primært med React og Next.js men har også erferring med andre teknologier såsom
+                Elixir/Pheonix, asp.net og unity.
+              </p>
+            </article>
+            <li className="my-auto mr-3 mt-8 text-lg font-bold font-mono">Teknologier:</li>  
             <div className="flex justify-center flex-row gap-2">
               <picture>
                 <Image width={32} height={32} alt={"react"} src={"/react_light.svg"} />
