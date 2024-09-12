@@ -1,8 +1,6 @@
-import { PostsOrPages } from "@tryghost/content-api";
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { ReactElement, use, useEffect } from "react";
-import { getBlogPosts, ghostClient } from "~/lib/ghost";
+import { type ReactElement } from "react";
+import { getBlogPosts} from "~/lib/ghost";
 
 
 export default async function Blog() {

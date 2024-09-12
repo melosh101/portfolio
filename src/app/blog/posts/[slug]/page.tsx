@@ -1,6 +1,5 @@
-import { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 import Navbar from '~/app/_components/navbar'
 import { getBlogPost } from '~/lib/ghost'
 
@@ -11,7 +10,6 @@ type props = {
 }
 export async function generateMetadata(
   { params }: props,
-  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
   return {

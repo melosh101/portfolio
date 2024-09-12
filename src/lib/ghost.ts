@@ -10,7 +10,7 @@ export const ghostClient = new GhostContentAPI({
     version: "v5.0",
     makeRequest: ({method, headers, params, url}) => {
         console.log("making request");
-        // @ts-ignore
+        // @ts-expect-error unsafe axios[method] call
         return axios[method](url, {
             params,
             paramsSerializer: (parameters: {
@@ -18,7 +18,7 @@ export const ghostClient = new GhostContentAPI({
             }) => {
                 return Object.keys(parameters).reduce((parts, k) => {
                     const val = encodeURIComponent([].concat(parameters[k]).join(','));
-                    //@ts-ignore
+                    //@ts-expect-error some weird type error, ts is casting it as a array but is in fact a string
                     return parts.concat(`${k}=${val}`);
                 }, []).join('&');
             },

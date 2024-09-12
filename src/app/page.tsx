@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { HydrateClient } from "~/trpc/server";
 import Image from "next/image";
 import Navbar from "./_components/navbar";
