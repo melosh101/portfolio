@@ -1,4 +1,4 @@
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Navbar from '~/app/_components/navbar'
 import { getBlogPost } from '~/lib/ghost'
@@ -8,6 +8,11 @@ type props = {
     slug: string
   }
 }
+
+
+export const revalidate = 3600
+export const dynamicParams = true;
+ 
 export async function generateMetadata(
   { params }: props,
 ): Promise<Metadata> {
