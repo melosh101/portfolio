@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { type ReactElement } from "react";
 import { getBlogPosts} from "~/lib/ghost";
+import Navbar from "../_components/navbar";
 
 export const revalidate = 60
 
@@ -16,7 +17,14 @@ export default async function Blog() {
     })
     return (
         <>
-        {renderList}
+        <header><Navbar/></header>
+        <main>
+            <h1>THIS IS WORK IN PROGRESS</h1>
+            <h1>Recent blogs</h1>
+            <li>
+                {renderList}
+            </li>
+        </main>
         </>
     )
 }

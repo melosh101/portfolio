@@ -8,7 +8,7 @@ export default async function Home() {
       <header className="fixed top-0 w-full md:relative">
         <Navbar />
       </header>
-      <main className="min-h-screen dark:text-white  mt-28 md:mt-8 list-none">
+      <main className="min-h-screen mt-28 md:mt-8 list-none">
 
         <section className="text-center items-center md:flex md:flex-row-reverse md:justify-center">
           <Image width={1000} height={1000} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-lg mx-auto md:w-[40%] lg:w-[30%] md:mx-4 " />
@@ -24,6 +24,7 @@ export default async function Home() {
               </p>
             </article>
             <li className="my-auto mr-3 mt-8 text-lg font-bold font-mono">Teknologier:</li>  
+            {/* technology list */}
             <div className="flex justify-center flex-row gap-2">
               <picture>
                 <Image width={32} height={32} alt={"react"} src={"/javascript.svg"} className="md:w-12 md:h-12"/>
@@ -55,12 +56,12 @@ export default async function Home() {
           <h2 className="text-2xl ">Mine projekter.</h2>
           <div className="mt-6 text-left lg:grid lg:grid-cols-2">
             <article className="bg-slate-900 p-4 rounded-lg m-4">
-              <h1 className="font-bold">Portfolio:</h1>
+              <h1 className="font-bold">Portfolie:</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Sit quaerat quidem saepe placeat sunt ducimus nisi odio eveniet natus error facilis illum ad nihil assumenda,
-                omnis, in neque, consequuntur totam.
+                Kort sagt er det den side du kikker på nu. Den er lavet med Typescript og Next.js. <br />
+                Alt inhold på min blog er skrevet på en self-hosted instans af <a className="text-blue-400 hover:text-purple-400" href="https://ghost.org">Ghost</a>
               </p>
+              <li className="list-none mt-2">se kilde koden <a href="https://github.com/melosh101/portfolio/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
             </article>
             <article className="bg-slate-900 p-4 rounded-lg m-4">
               <h1 className="font-bold">Portfolio:</h1>
