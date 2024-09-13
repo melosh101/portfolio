@@ -8,6 +8,9 @@ export const env = createEnv({
    */
   server: {
     DATABASE_URL: z.string().url(),
+    GHOST_CONTENT_KEY: z.string(),
+    GHOST_ADMIN_KEY: z.string(),
+    GHOST_API_URL: z.string(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
@@ -29,6 +32,9 @@ export const env = createEnv({
   runtimeEnv: {
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
+    GHOST_ADMIN_KEY: process.env.GHOST_ADMIN_KEY,
+    GHOST_API_URL: process.env.GHOST_API_URL,
+    GHOST_CONTENT_KEY: process.env.GHOST_CONTENT_KEY,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

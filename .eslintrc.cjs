@@ -4,6 +4,9 @@ const config = {
   "parserOptions": {
     "project": true
   },
+  ignorePatterns: [
+    "/src/lib/ghost.ts"
+  ],
   "plugins": [
     "@typescript-eslint",
     "drizzle"
