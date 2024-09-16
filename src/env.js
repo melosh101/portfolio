@@ -1,5 +1,5 @@
 import { createEnv } from "@t3-oss/env-nextjs";
-import { z } from "zod";
+import { number, z } from "zod";
 
 export const env = createEnv({
   /**
@@ -11,6 +11,9 @@ export const env = createEnv({
     GHOST_CONTENT_KEY: z.string(),
     GHOST_ADMIN_KEY: z.string(),
     GHOST_API_URL: z.string(),
+    REDIS_HOST: z.string(),
+    REDIS_PASSWORD: z.string(),
+    REDIS_PORT: z.number(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
@@ -35,6 +38,10 @@ export const env = createEnv({
     GHOST_ADMIN_KEY: process.env.GHOST_ADMIN_KEY,
     GHOST_API_URL: process.env.GHOST_API_URL,
     GHOST_CONTENT_KEY: process.env.GHOST_CONTENT_KEY,
+    REDIS_PASSWORD: process.env.REDIS_PASSWORD,
+    // @ts-ignore
+    REDIS_PORT: parseInt(process.env.REDIS_PORT),
+    REDIS_HOST: process.env.REDIS_HOST
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

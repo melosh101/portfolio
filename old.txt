@@ -1,0 +1,45 @@
+        <div className="grid h-40 grid-cols-[2.5fr_1fr] ">
+          <div
+            id="gridContentWrapper"
+            className="ml-[40%] h-full flex-nowrap items-center justify-end self-start"
+          >
+            <section className="flex">
+              <div>
+
+              </div>
+              <Image
+                alt="pfp"
+                src={"/pfp_nobg.svg"}
+                height={"1000"}
+                width={"1000"}
+                className="ml-44 mt-20 h-[80%] w-[80%]"
+              />
+            </section>
+            <section >
+
+              <article >
+
+              </article>
+              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
+                <li className="text-xl">Want to see more?</li>
+                <li className="text-l">
+                  including blog posts, self-hosting projects and much more
+                </li>
+              </article>
+              <article className="col-span-1 size-12 h-full w-full rounded-md bg-primary p-2 dark:text-white">
+                <li className="text-xl">Want to see more?</li>
+                <li className="text-l">
+                  including blog posts, self-hosting projects and much more
+                </li>
+              </article>
+              <Link
+                className="relative list-none self-start"
+                href={"https://github.com/melosh101"}
+                target="_blank"
+              >
+                Check out my github
+              </Link>
+            </section>
+          </div>
+
+        </div>

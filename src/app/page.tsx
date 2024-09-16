@@ -1,6 +1,15 @@
 import { HydrateClient } from "~/trpc/server";
 import Image from "next/image";
 import Navbar from "./_components/navbar";
+import milasholsting from "$/milasholsting.png";
+import javascript from "$/javascript.svg"
+import typescript from "$/typescript.svg"
+import react from "$/react_light.svg"
+import next_dark from "$/next/dark/icon.svg"
+import next_light from "$/next/light/icon.svg"
+import elixir from "$/elixir.png"
+import csharp from "$/csharp.svg"
+import tailwind from "$/tailwindcss.svg"
 
 export default async function Home() {
   return (
@@ -11,7 +20,7 @@ export default async function Home() {
       <main className="min-h-screen mt-28 md:mt-8 list-none">
 
         <section className="text-center items-center md:flex md:flex-row-reverse md:justify-center">
-          <Image width={1000} height={1000} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-lg mx-auto md:w-[40%] lg:w-[30%] md:mx-4 " />
+          <Image width={1000} height={1000} src={milasholsting} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-lg mx-auto md:w-[40%] lg:w-[30%] md:mx-4 " />
           <div className="md:my-auto">
             <h1 className="text-4xl mt-4 sm:mt-0 md:text-6xl">Milas Holsting</h1>
             <li className="text-xl font-mono md:text-4xl md:mt-4">&lt;Code is life/&gt;</li>
@@ -27,26 +36,26 @@ export default async function Home() {
             {/* technology list */}
             <div className="flex justify-center flex-row gap-2">
               <picture>
-                <Image width={32} height={32} alt={"react"} src={"/javascript.svg"} className="md:w-12 md:h-12"/>
+                <Image width={32} height={32} alt={"react"} src={javascript} className="md:w-12 md:h-12"/>
               </picture>
               <picture>
-                <Image width={32} height={32} alt={"react"} src={"/typescript.svg"} className="md:w-12 md:h-12"/>
+                <Image width={32} height={32} alt={"react"} src={typescript} className="md:w-12 md:h-12"/>
               </picture>
               <picture>
-                <Image width={32} height={32} alt={"react"} src={"/react_light.svg"} className="md:w-12 md:h-12"/>
+                <Image width={32} height={32} alt={"react"} src={react} className="md:w-12 md:h-12"/>
               </picture>
               <picture className="">
-                <source srcSet="/next/dark/icon.svg" media="(prefers-color-scheme:dark)" />
-                <Image width={32} height={32} alt={"react"} src={"/next/light/icon.svg"} className="md:w-12 md:h-12" />
+                <source srcSet={next_dark} media="(prefers-color-scheme:dark)" />
+                <Image width={32} height={32} alt={"react"} src={next_light} className="md:w-12 md:h-12" />
               </picture>
               <picture>
-                <Image width={444} height={680} alt={"react"} src={"/elixir.png"}  className="bg-white aspect-auto w-[21px] h-[32px] md:h-[48px] md:w-[31px]"/>
+                <Image width={32} height={32} alt={"react"} src={tailwind}  className="aspect-auto w-[21px] h-[32px] md:h-[48px] md:w-[48px]"/>
               </picture>
               <picture>
-                <Image width={32} height={32} alt={"react"} src={"/csharp.svg"}  className="aspect-auto w-[21px] h-[32px] md:h-[48px] md:w-[48px]"/>
+                <Image width={444} height={680} alt={"react"} src={elixir}  className="bg-white aspect-auto w-[21px] h-[32px] md:h-[48px] md:w-[31px]"/>
               </picture>
               <picture>
-                <Image width={32} height={32} alt={"react"} src={"/tailwindcss.svg"}  className="aspect-auto w-[21px] h-[32px] md:h-[48px] md:w-[48px]"/>
+                <Image width={32} height={32} alt={"react"} src={csharp}  className="aspect-auto w-[21px] h-[32px] md:h-[48px] md:w-[48px]"/>
               </picture>
             </div>
           </div>
