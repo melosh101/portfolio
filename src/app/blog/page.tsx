@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { type ReactElement } from "react";
-import { getBlogPosts} from "~/lib/ghost";
 import Navbar from "../_components/navbar";
 import { unstable_noStore } from "next/cache";
 import { api } from "~/trpc/server";
