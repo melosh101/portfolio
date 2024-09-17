@@ -1,5 +1,5 @@
 import { createEnv } from "@t3-oss/env-nextjs";
-import { number, z } from "zod";
+import { z } from "zod";
 
 export const env = createEnv({
   /**
@@ -39,7 +39,7 @@ export const env = createEnv({
     GHOST_API_URL: process.env.GHOST_API_URL,
     GHOST_CONTENT_KEY: process.env.GHOST_CONTENT_KEY,
     REDIS_PASSWORD: process.env.REDIS_PASSWORD,
-    // @ts-ignore
+    // @ts-expect-error should be defined
     REDIS_PORT: parseInt(process.env.REDIS_PORT),
     REDIS_HOST: process.env.REDIS_HOST
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
