@@ -15,13 +15,6 @@ export const cacheAllPostSchema = z.array(PostSchema);
 
 
 export const postRouter = createTRPCRouter({
-  hello: publicProcedure
-    .input(z.object({ text: z.string() }))
-    .query(({ input }) => {
-      return {
-        greeting: `Hello ${input.text}`,
-      };
-    }),
 
   getAllPosts: publicProcedure
     .query(async ({ctx}) => {
