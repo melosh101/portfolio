@@ -64,11 +64,10 @@ export default async function Home() {
               <li className="list-none mt-2">se kilde koden <a href="https://github.com/melosh101/portfolio/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
             </article>
             <article className="bg-slate-900 p-4 rounded-lg m-4">
-              <h1 className="font-bold">Portfolio:</h1>
+              <h1 className="font-bold">Akov news 23-24:</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Sit quaerat quidem saepe placeat sunt ducimus nisi odio eveniet natus error facilis illum ad nihil assumenda,
-                omnis, in neque, consequuntur totam.
+                Askov news er en nyheds side, som blev lavet i vore Politiske uge. <br />
+                
               </p>
             </article>
             <article className="bg-slate-900 p-4 rounded-lg m-4">
