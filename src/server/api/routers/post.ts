@@ -55,9 +55,15 @@ export const postRouter = createTRPCRouter({
         if(cacheResult.success) {
           return cacheResult.data;
         }
-        const res = await PostSchema.safeParseAsync(await getBlogPost(input.slug));
-        if(!res.success) return undefined;
+        const debug = await getBlogPost(input.slug)
+        const res = await PostSchema.safeParseAsync(debug);
+        console.log(debug)
+        if(!res.success) {
+          console.log(res.error.message);
+          return null;
+        }
+        console.log(res.data)
         await ctx.redis.multi().call("JSON.SET", `Post:${res.data.slug}`, "$", JSON.stringify(res.data)).expire(`Post:${res.data.slug}`, 3600).exec();
-        
+        return res.data;
       })
 });

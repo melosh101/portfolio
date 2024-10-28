@@ -38,5 +38,5 @@ export const getBlogPosts = unstable_cache(async () => {
 }, ["posts"], {revalidate: 60, tags: ["posts"]});
 
 export const getBlogPost = unstable_cache(async (slug: string) => {
-    return await ghostClient.posts.read({slug})
+    return await ghostClient.posts.read({slug},{include: "tags"})
 }, [`post`], {revalidate: 3600, tags: ["post"]});
