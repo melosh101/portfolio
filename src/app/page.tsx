@@ -5,9 +5,6 @@ import Navbar from "./_components/navbar";
 export default async function Home() {
   return (
     <HydrateClient>
-      <header className="fixed top-0 w-full md:relative">
-        <Navbar />
-      </header>
       <main className="min-h-screen mt-28 md:mt-8 list-none">
 
         <section className="text-center items-center md:flex md:flex-row-reverse md:justify-center">
@@ -71,19 +68,21 @@ export default async function Home() {
               </p>
             </article>
             <article className="bg-slate-900 p-4 rounded-lg m-4">
-              <h1 className="font-bold">Portfolio:</h1>
+              <h1 className="font-bold"><a href="https://go-hollywood.milasholsting.dk" target="_blank" className="">Go hollywood:</a></h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Sit quaerat quidem saepe placeat sunt ducimus nisi odio eveniet natus error facilis illum ad nihil assumenda,
-                omnis, in neque, consequuntur totam.
+                go hollywood er et projekt, som jeg lavede i forbindelse med min uddannelse på RTS. <br />
+                Go hollywood var et projekt hvor vi skulle lave en tailer og en hjemmeside for en fiktiv film produktion. <br />
+                jeg var med til at lave hjemmesiden, som er lavet med Next.js og TailwindCSS.
+                <li className="list-none mt-2">se kilde koden <a href="https://github.com/melosh101/go-hollywood/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
               </p>
             </article>
             <article className="bg-slate-900 p-4 rounded-lg m-4">
-              <h1 className="font-bold">Portfolio:</h1>
+              <h1 className="font-bold">Fact of the day:</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Sit quaerat quidem saepe placeat sunt ducimus nisi odio eveniet natus error facilis illum ad nihil assumenda,
-                omnis, in neque, consequuntur totam.
+                Fact of the day er en Discord bot, som jeg er co-maintainer af. <br />
+                den er lavet med Discord.js og javascript.
+                den bruger discord.js til at sende en tilfældig fakta om en person til en discord server.
+                kilde koden er ikke offentligt tilgængelig.
               </p>
             </article>
           </div>
