@@ -29,7 +29,8 @@ export const ghostClient = new GhostContentAPI({
 export const getBlogPosts = unstable_cache(async () => {
     return await ghostClient.posts
     .browse({
-      limit: "all"
+      limit: "all",
+      include: "tags"
     })
     .catch(err => {
       console.error(err);
@@ -37,5 +38,5 @@ export const getBlogPosts = unstable_cache(async () => {
 }, ["posts"], {revalidate: 60, tags: ["posts"]});
 
 export const getBlogPost = unstable_cache(async (slug: string) => {
-    return await ghostClient.posts.read({slug})
+    return await ghostClient.posts.read({slug},{include: "tags"})
 }, [`post`], {revalidate: 3600, tags: ["post"]});

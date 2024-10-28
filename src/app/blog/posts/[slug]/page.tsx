@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Navbar from '~/app/_components/navbar'
 import { getBlogPost } from '~/lib/ghost'
+import { api } from '~/trpc/server'
 
 type props = {
   params: {
@@ -16,15 +17,16 @@ export const dynamicParams = true;
 export async function generateMetadata(
   { params }: props,
 ): Promise<Metadata> {
-  const post = await getBlogPost(params.slug);
+  const post = await api.post.getSinglePost({slug: params.slug});
+  if(!post) return {title: '404 Post not found'}
   return {
     title: post.title
   }
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const post = await getBlogPost(params.slug);
-  if (!post.html) return <></>
+  const post = await api.post.getSinglePost({slug: params.slug});
+  if (!post) return <></>
   return (
     <>
       <header className='fixed top-0 w-full md:relative'><Navbar /></header>

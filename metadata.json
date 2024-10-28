@@ -1,0 +1,7 @@
+{
+    "name": "portfolio",
+    "tools": ["nextjs", "tailwindcss", "typescript"],
+    "description": "this is the source code for my portfolio, its written using Typescript, next, trpc and drizzle",
+    "prod_url": "https://milasholsting.dk",
+    "version": "1.0.0"
+}
