@@ -16,17 +16,22 @@ export default async function Blog() {
     }
     console.log(posts);
     posts.map((post, i) => {
-        renderList.push(<Link key={i} href={`/blog/posts/${post.slug}`} prefetch><h1>{post.title}</h1></Link>)
+        renderList.push(<article key={i} className="bg-slate-700 p-4">
+            <Link href={`/blog/posts/${post.slug}`} className="hover:cursor-help" prefetch>{post.title}</Link>
+            <section>
+                <p>{post.excerpt}</p>
+            </section>
+        </article>)
     })
     return (
         <>
         <header><Navbar/></header>
-        <main>
+        <main className="">
             <h1>THIS IS WORK IN PROGRESS</h1>
             <h1>Recent blogs</h1>
-            <li>
-                {renderList}
-            </li>
+            <div className="grid grid-cols-1 gap-4 w-[80%] mx-auto mt-8">
+                    {renderList}
+            </div>
         </main>
         </>
     )
