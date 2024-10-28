@@ -9,7 +9,7 @@ const Navbar = React.forwardRef<HTMLElement>(() => {
             <Image src={"/pfp_nobg.svg"} alt="pfp" width={"48"} height={"48"} className="size-20 aspect-square" />
         </Link>
         <Link href="/projects" className="text-white bg-[#192441] hover:bg-[#3F51B5] font-medium rounded-lg text-sm mx-5 px-8 py-2.5 mr-2">Projekter</Link>
-        <Link href="/blog" className="text-white bg-[#192441] hover:bg-[#3F51B5] font-medium rounded-lg text-sm mx-5 px-8 py-2.5 mr-2">blog</Link>
+        {/* <Link href="/blog" className="text-white bg-[#192441] hover:bg-[#3F51B5] font-medium rounded-lg text-sm mx-5 px-8 py-2.5 mr-2">blog</Link> */}
     </nav>
 })
 
