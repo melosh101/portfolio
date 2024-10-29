@@ -11,7 +11,6 @@ import superjson from "superjson";
 import { ZodError } from "zod";
 
 import { db } from "~/server/db";
-import { RedisClient } from "../redis";
 
 /**
  * 1. CONTEXT
@@ -28,7 +27,6 @@ import { RedisClient } from "../redis";
 export const createTRPCContext = async (opts: { headers: Headers }) => {
   return {
     db,
-    redis: RedisClient,
     ...opts,
   };
 };
