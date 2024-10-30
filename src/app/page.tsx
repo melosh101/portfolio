@@ -2,22 +2,25 @@ import { HydrateClient } from "~/trpc/server";
 import Image from "next/image";
 import Navbar from "./_components/navbar";
 import { ProjectCard, ProjectDescription, ProjectFooter, ProjectTitle } from "./projectCard";
+import posthog from "posthog-js";
 
 export default async function Home() {
+
+  posthog.capture('my event', { property: 'value' })
   return (
     <HydrateClient>
-      <main className="min-h-screen mt-28 md:mt-8 list-none">
+      <main className="min-h-screen mt-10 md:mt-8 list-none">
 
         <section className="text-center items-center md:flex md:flex-row-reverse md:justify-center">
-          <Image width={512} height={512} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-lg mx-auto md:w-[40%] lg:w-[30%] md:mx-4 shadow-lg dark:shadow-slate-900 shadow-slate-500" />
+          <Image width={512} height={512} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-md mx-auto md:w-[40%] lg:w-[30%] md:mx-4 shadow-md dark:shadow-slate-900 shadow-gray-800" />
           <div className="md:my-auto">
             <h1 className="text-4xl mt-4 sm:mt-0 md:text-6xl">Milas Holsting</h1>
             <li className="text-xl font-mono md:text-4xl md:mt-4">&lt;Code is life/&gt;</li>
             <article className="block text-left mt-4 mx-4 px-4 py-2 rounded-lg dark:bg-slate-900 bg-gray-300 shadow-md shadow-slate-500 dark:shadow-slate-950">
-              <h3 className="font-semibold">Hvem er jeg?</h3>
+              <h3 className="font-semibold">Hvem er Jeg?</h3>
               <p className="font-sans max-w-96">
-                jeg er en 18 årig ung dreng, som elsker et god udfordring. <br />
-                Jeg arbejder primært med React og Next.js men har også erferring med andre teknologier såsom
+                Jeg er en 18 årig ung dreng, som elsker et god udfordring. <br />
+                Jeg arbejder primært med React og Next.js men har også erferring med andre teknologier såsom,
                 Elixir/Pheonix, asp.net og unity.
               </p>
             </article>
@@ -49,7 +52,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <hr className="mx-auto my-12 w-[90%] border-slate-600 dark:border-slate-500 border-[2px] rounded-sm shadow-md shadow-slate-950" />
+        <hr className="mx-auto my-12 w-[90%] border-slate-600 dark:border-slate-700 border-[2px] rounded-sm shadow-md shadow-slate-950" />
         <section className="text-center lg:w-[60%] gap-8 mx-auto">
           <h2 className="text-2xl ">Mine projekter.</h2>
           <div className="mt-6 text-left lg:grid lg:grid-cols-2">

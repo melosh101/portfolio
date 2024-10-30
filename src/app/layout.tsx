@@ -5,6 +5,7 @@ import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import favicon from "$/favicon.ico"
+import { CSPostHogProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: "Milas Holsting Portfolie",
@@ -16,9 +17,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} `}>
+    <html lang="da" className={`${GeistSans.variable} `}>
       <body className="bg-slate-50 dark:bg-slate-800 dark:text-white">
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <CSPostHogProvider>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+        </CSPostHogProvider>
       </body>
     </html>
   );
