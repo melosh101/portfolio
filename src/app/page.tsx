@@ -83,7 +83,7 @@ export default async function Home() {
                 Jeg var med til at lave hjemmesiden, som er lavet med Next.js og TailwindCSS.
               </ProjectDescription>
               <ProjectFooter>
-                <li className="">Se kilde koden <a href="https://github.com/melosh101/askovNews23-24/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
+                <li className="">Se kilde koden <a href="https://github.com/melosh101/go-hollywood/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
               </ProjectFooter>
             </ProjectCard>
             <ProjectCard>
