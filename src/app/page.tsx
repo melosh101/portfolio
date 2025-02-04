@@ -15,7 +15,7 @@ export default async function Home() {
           <Image width={512} height={512} src={"/milasholsting.png"} alt={"profil billede"} className="w-[80%] aspect-square block mt-8 rounded-md mx-auto md:w-[40%] lg:w-[30%] md:mx-4 shadow-md dark:shadow-slate-900 shadow-gray-800" />
           <div className="md:my-auto">
             <h1 className="text-4xl mt-4 sm:mt-0 md:text-6xl">Milas Holsting</h1>
-            <li className="text-xl font-mono md:text-4xl md:mt-4">&lt;Code is life/&gt;</li>
+            <p className="text-xl font-mono md:text-4xl md:mt-4">&lt;Code is life/&gt;</p>
             <article className="block text-left mt-4 mx-4 px-4 py-2 rounded-lg dark:bg-slate-900 bg-gray-300 shadow-md shadow-slate-500 dark:shadow-slate-950">
               <h3 className="font-semibold">Hvem er Jeg?</h3>
               <p className="font-sans max-w-96">
@@ -24,7 +24,7 @@ export default async function Home() {
                 Elixir/Pheonix, asp.net og unity.
               </p>
             </article>
-            <li className="my-auto mr-3 mt-8 text-lg font-bold font-mono">Teknologier:</li>  
+            <p className="my-auto mr-3 mt-8 text-lg font-bold font-mono">Teknologier:</p>  
             {/* technology list */}
             <div className="flex justify-center flex-row gap-2">
               <picture>
@@ -52,8 +52,8 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <hr className="mx-auto my-12 w-[90%] border-slate-600 dark:border-slate-700 border-[2px] rounded-sm shadow-md shadow-slate-950" />
-        <section className="text-center lg:w-[60%] gap-8 mx-auto">
+
+        <section className="text-center lg:w-[60%] gap-8 mx-auto mt-28">
           <h2 className="text-2xl ">Mine projekter.</h2>
           <div className="mt-6 text-left lg:grid lg:grid-cols-2">
             <ProjectCard>
@@ -71,8 +71,8 @@ export default async function Home() {
                 Askov news er en nyheds side, som blev lavet i vores Politiske uge på Akskov efterskole. <br />
               </ProjectDescription>
               <ProjectFooter>
-                <li className="">Se siden her<a href="https://2023.askov.news/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
-                <li className="">Se kilde koden <a href="https://github.com/melosh101/askovNews23-24/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
+                <p className="">Se siden her<a href="https://2023.askov.news/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></p>
+                <p className="">Se kilde koden <a href="https://github.com/melosh101/askovNews23-24/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></p>
               </ProjectFooter>
             </ProjectCard>
             <ProjectCard>
@@ -83,7 +83,7 @@ export default async function Home() {
                 Jeg var med til at lave hjemmesiden, som er lavet med Next.js og TailwindCSS.
               </ProjectDescription>
               <ProjectFooter>
-                <li className="">Se kilde koden <a href="https://github.com/melosh101/go-hollywood/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
+                <p className="">Se kilde koden <a href="https://github.com/melosh101/go-hollywood/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></p>
               </ProjectFooter>
             </ProjectCard>
             <ProjectCard>
@@ -94,7 +94,7 @@ export default async function Home() {
                 Den bruger discord.js til at sende en tilfældig fakta om en person til en discord server.
               </ProjectDescription>
               <ProjectFooter>
-                <li className="">Kilde koden er ikke offentligt tilgængelig.</li>
+                <p className="">Kilde koden er ikke offentligt tilgængelig.</p>
               </ProjectFooter>
             </ProjectCard>
           </div>
