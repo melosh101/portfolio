@@ -21,7 +21,7 @@ const ProjectTitle = React.forwardRef<
   HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-  <h1  ref={ref} className={cn("font-bold text-2xl", className)} {...props}/>
+  <h3  ref={ref} className={cn("font-bold text-2xl", className)} {...props}/>
 ));
 
 

@@ -17,7 +17,7 @@ export default async function Home() {
             <h1 className="text-4xl mt-4 sm:mt-0 md:text-6xl">Milas Holsting</h1>
             <p className="text-xl font-mono md:text-4xl md:mt-4">&lt;Code is life/&gt;</p>
             <article className="block text-left mt-4 mx-4 px-4 py-2 rounded-lg dark:bg-slate-900 bg-gray-300 shadow-md shadow-slate-500 dark:shadow-slate-950">
-              <h3 className="font-semibold">Hvem er Jeg?</h3>
+              <h2 className="font-semibold">Hvem er Jeg?</h2>
               <p className="font-sans max-w-96">
                 Jeg er en 18 årig ung dreng, som elsker et god udfordring. <br />
                 Jeg arbejder primært med React og Next.js men har også erferring med andre teknologier såsom,
@@ -62,7 +62,7 @@ export default async function Home() {
                 Kort sagt er det den side du kikker på nu. Den er lavet med Typescript og Next.js. <br />
               </ProjectDescription>
               <ProjectFooter>
-                <li>se kilde koden <a href="https://github.com/melosh101/portfolio/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></li>
+                <p>se kilde koden <a href="https://github.com/melosh101/portfolio/" target="_blank" className="text-blue-400 hover:text-purple-400">HER</a></p>
               </ProjectFooter>
             </ProjectCard>
             <ProjectCard>
